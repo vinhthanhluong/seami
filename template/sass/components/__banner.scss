@@ -19,7 +19,7 @@
 	}
 	.swiper-pagination {
 		position: absolute;
-		bottom: 0;
+		bottom: 45px;
 		.swiper-pagination-bullet{
 			background-color: $w-cl;
 			opacity: 1;
@@ -38,6 +38,8 @@
 		height: 700px;
 		display: flex;
 		// align-items: center;
+		align-items: flex-end;
+		padding-bottom: 90px;
 		.banners-title{
 			line-height: 1.2;
 			margin-bottom: 30px;
@@ -46,10 +48,19 @@
 		.banners-desc{
 			line-height: 1.5;
 		}
+		
+		.banners-text{
+			width: calc(100% - 370px);
+			padding-right: 100px;
+		}
 
 		.banners-video{
+			width: 370px;
+			height: 250px;
 			video{
-				width: 370px;
+				width: 100%;
+				object-fit: cover;
+				background-size: cover;
 			}
 		}
 		

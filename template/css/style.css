@@ -2679,7 +2679,7 @@ sup {
 }
 .banners .swiper-pagination {
   position: absolute;
-  bottom: 0;
+  bottom: 45px;
 }
 .banners .swiper-pagination .swiper-pagination-bullet {
   background-color: #fff;
@@ -2694,6 +2694,8 @@ sup {
 .banners .banners-inner {
   height: 700px;
   display: flex;
+  align-items: flex-end;
+  padding-bottom: 90px;
 }
 .banners .banners-inner .banners-title {
   line-height: 1.2;
@@ -2702,8 +2704,18 @@ sup {
 .banners .banners-inner .banners-desc {
   line-height: 1.5;
 }
-.banners .banners-inner .banners-video video {
+.banners .banners-inner .banners-text {
+  width: calc(100% - 370px);
+  padding-right: 100px;
+}
+.banners .banners-inner .banners-video {
   width: 370px;
+  height: 250px;
+}
+.banners .banners-inner .banners-video video {
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
 }
 
 .f-control {
