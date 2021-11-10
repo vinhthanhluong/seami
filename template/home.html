@@ -25,12 +25,15 @@
                     <div class="header-bottom-inner">
                         <div class="header-bt-iner">
                             <div class="header-hotline">
-                                <img src="./img/svg/icon-phone.svg" alt="icon-phone.svg">
+                                <a href="tel:02873030369" class="hotline-img">
+                                    <img src="./img/svg/icon-phone.svg" alt="icon-phone.svg">
+                                </a>
+
                                 <div class="hotline-text">
                                     <p class="hotline-t">
                                         Hotline:
                                     </p>
-                                    <a href="#" class="hotline-num f-bold main-cl">
+                                    <a href="tel:02873030369" class="hotline-num f-bold main-cl">
                                         (028)7.30.30.369
                                     </a>
                                 </div>
@@ -42,7 +45,12 @@
                                 </a>
                             </div>
                             <div class="header-right">
-                                <a href="#" class="header-signup">Đăng ký học</a>
+                                <div class="header-sigup">
+                                    <a href="#" class="signup-desktop">Đăng ký học
+                                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                    </a>
+
+                                </div>
 
                                 <div class="hamburger-btn">
                                     <div class="bar"></div>
@@ -102,11 +110,11 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="dropdown">
+                                <li class="dropdown ">
                                     <a href="#">Khóa học</a>
-                                    <ul class="mega-menu mega-menu-multi sub-menu">
+                                    <ul class="mega-menu mega-menu-multi  ">
                                         <div class="triangle"></div>
-                                        <li class="drop-mega ">
+                                        <li class="drop-mega">
                                             <a href="#">Guitar</a>
                                             <ul class="mega-list">
                                                 <li class="">
@@ -245,8 +253,8 @@
                                                 </div>
                                             </ul>
                                         </li>
-                                        <li class="mobile-menu-back-item">
-                                            <a href="#" class="mobile-menu-back-link">Back</a>
+                                        <li class=" mega-back">
+                                            <a href="#" class="mega-back-link">Back</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -349,6 +357,49 @@
             </div>
         </header>
         <main class="main">
+            <div class="banners">
+                <div class="banners-wrapper">
+                    <div class="swiper-custom">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="banners-wrap"
+                                        style="background-image: url('./img/bg-banner-slide.png');">
+                                        <div class="container">
+                                            <div class="banners-inner">
+                                                <div class="banners-text">
+                                                    <h3 class="banners-title tt-60 f-dancing">
+                                                        Seami - Ươm mầm tài năng trẻ
+                                                    </h3>
+                                                    <p class="banners-desc tt-18 f-light">
+                                                        invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                                        voluptua.
+                                                        At vero
+                                                        eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                                                        gubergren,
+                                                        no sea takimata sanctus est gubergren, no sea takimata sanctus
+                                                        est
+                                                    </p>
+                                                </div>
+
+                                                <div class="banners-video bx-video">
+                                                    <video id="my-video">
+                                                        <source src="./img/video.mp4" type="video/mp4"/>
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="container">
                 <div class="test-main" style="height: 500px; background: sandybrown;"></div>
 
@@ -491,109 +542,144 @@
 
 
         </main>
-        <footer class="footer">
-            <div class="test">
-
-            </div>
-        </footer>
-        <!-- cart popup -->
-        <div class="cart-popup">
-            <div class="bg-cart"></div>
-            <div class="box-cart">
-                <div class="wrapper-box-cart">
-                    <div class="hd-box-cart">
-                        <h3 class="title-name">Shopping Cart</h3>
-                        <button class="btn-close">Close</button>
-                    </div>
-                    <div class="container-boxcart">
-                        <div class="product-list">
-                            <div class="product-bag">
-                                <div class="product-bag-img">
-                                    <img src="img/pro2.png" alt="">
+        <footer class="footer sec-100 --pb-0">
+            <img src="./img/bg-footer.png" alt="bg-footer.png" class="bg-footer">
+            <div class="container">
+                <div class="footer-wrapper">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="ft-inner">
+                                <div class="ft-logo">
+                                    <img src="./img/logo-header.png" alt="logo-header.png">
                                 </div>
-                                <div class="product-data">
-                                    <div class="product-bag-detail">
-                                        <a class="name-product-cart" href="#">Áo thun
-                                            nam</a>
-                                        <span class="product-size">XXL</span>
-                                    </div>
-                                    <div class="product-row">
-                                        <div class="cart-qty">
-                                            <button class="cart-qty-minus" type="button" value="-">-</button>
-
-                                            <input type="text" name="qty" min="0" class="qty form-control" value="1" />
-
-                                            <button class="cart-qty-plus" type="button" value="+">+</button>
-                                        </div>
-                                        <div class="product-price">
-                                            <span>1,900,000 đ</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="ft-desc tt-12">
+                                    South East Asia Music Institute - SEAMI là đơn vị chuyên đào tạo nghệ thuật âm nhạc,
+                                    với các bộ môn Guitar, Piano, Thanh nhạc, Trống. Mỗi nơi SEAMI - Music in Town dừng
+                                    lại, âm nhạc đều trở thành một phần của không gian sống nơi đó. Tại khu phố nhỏ, mọi
+                                    người đều có thể ghé SEAMI học nhạc một cách đơn giản, thoải mái và bình dị nhất.
+                                </p>
                             </div>
-                            <div class="product-bag">
-                                <div class="product-bag-img">
-                                    <img src="img/pro2.png" alt="">
-                                </div>
-                                <div class="product-data">
-                                    <div class="product-bag-detail">
-                                        <a class="name-product-cart" href="#">Áo thun
-                                            nam</a>
-                                        <span class="product-size">XXL</span>
-                                    </div>
-                                    <div class="product-row">
-                                        <div class="cart-qty">
-                                            <button class="cart-qty-minus" type="button" value="-">-</button>
+                        </div>
+                        <div class="column">
+                            <div class="ft-inner">
+                                <h4 class="ft-title tt-16 t-uppercase">
+                                    HỌC NHẠC CÙNG SEAMI tại
+                                </h4>
+                                <ul class="ft-list">
+                                    <li class="ft-item">
+                                        <a href="#" class="ft-link">
+                                            HỌC TẠI NHÀ <span>(Tìm hiểu thêm tại đây)</span>
+                                        </a>
+                                    </li>
+                                    <li class="ft-item">
+                                        <a href='#' class="ft-link">
+                                            7A/2 Nguyễn Thị Minh Khai, Q.1
+                                        </a>
+                                    </li>
+                                    <li class="ft-item">
+                                        <a href='#' class="ft-link">
+                                            19 Đường 30, Tân Phong, Q.7
+                                        </a>
+                                    </li>
+                                    <li class="ft-item">
+                                        <a href='#' class="ft-link">
+                                            31/09 Nguyễn Đình Khơi, Q. Tân Bình
+                                        </a>
+                                    </li>
+                                    <li class="ft-item">
+                                        <a href='#' class="ft-link">
+                                            553/18C Lũy Bán Bích, Q. Tân Phú
+                                        </a>
+                                    </li>
+                                    <li class="ft-item">
+                                        <a href='#' class="ft-link">
+                                            188 Nguyễn Thị Minh Khai, Q.3
+                                        </a>
+                                    </li>
+                                </ul>
 
-                                            <input type="text" name="qty" min="0" class="qty form-control" value="1" />
-                                            <button class="cart-qty-plus" type="button" value="+">+</button>
-                                        </div>
-                                        <div class="product-price">
-                                            <span>1,900,000 đ</span>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-                            <div class="product-bag">
-                                <div class="product-bag-img">
-                                    <img src="img/pro2.png" alt="">
-                                </div>
-                                <div class="product-data">
-                                    <div class="product-bag-detail">
-                                        <a class="name-product-cart" href="#">Áo thun
-                                            nam</a>
-                                        <span class="product-size">XXL</span>
-                                    </div>
-                                    <div class="product-row">
-                                        <div class="cart-qty">
-                                            <button class="cart-qty-minus" type="button" value="-">-</button>
+                        </div>
+                        <div class="column">
+                            <div class="ft-inner">
+                                <h4 class="ft-title tt-16 t-uppercase">
+                                    CHÍNH SÁCH & ĐIỀU KHOẢN
+                                </h4>
+                                <ul class="ft-list">
+                                    <li class="ft-item">
+                                        <a href="#" class="ft-link">
+                                            Thông Tin Chủ Sở Hữu Website
+                                        </a>
+                                    </li>
+                                    <li class="ft-item">
+                                        <a href='#' class="ft-link">
+                                            Điều Khoản Sử Dụng Của Người Dùng
+                                        </a>
+                                    </li>
+                                    <li class="ft-item">
+                                        <a href='#' class="ft-link">
+                                            Chính Sách Bảo Mật
+                                        </a>
+                                    </li>
+                                    <li class="ft-item">
+                                        <a href='#' class="ft-link">
+                                            Chính Sách Bảo Mật Của Trẻ Em
+                                        </a>
+                                    </li>
+                                    <li class="ft-item">
+                                        <a href='#' class="ft-link">
+                                            Điều Khoản Sử Dụng Của Giáo Viên
+                                        </a>
+                                    </li>
+                                    <li class="ft-item">
+                                        <a href='#' class="ft-link">
+                                            Chính Sách Công Khai Của Giáo Viên
+                                        </a>
+                                    </li>
+                                    <li class="ft-item">
+                                        <a href='#' class="ft-link">
+                                            Điều Khoản Logo
+                                        </a>
+                                    </li>
+                                </ul>
 
-                                            <input type="text" name="qty" min="0" class="qty form-control" value="1" />
-                                            <button class="cart-qty-plus" type="button" value="+">+</button>
-                                        </div>
-                                        <div class="product-price">
-                                            <span>1,900,000 đ</span>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="ft-inner">
+                                <h4 class="ft-title tt-16 t-uppercase">
+                                    ĐĂNG KÝ NHẬN ƯU ĐÃI
+                                </h4>
+                                <p class="ft-desc tt-12">
+                                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                                    accusam et justo duo dolores
+                                </p>
+                                <div class="ft-form">
+                                    <form action="#">
+                                        <input type="text" class="f-control" placeholder="Email của bạn...">
+                                        <button type="submit" class="f-submit btn">
+                                            <img src="./img/svg/icon-fly.svg" alt="icon-fly.svg">
+                                        </button>
+                                    </form>
                                 </div>
+
+                                <div class="ft-img-bct">
+                                    <img src="./img/img-bct.png" alt="img-bct.png">
+                                    <img src="./img/img-dmca.png" alt="img-dmca.png">
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <div class="footer-boxcart">
-                        <div class="wrapper-footer-boxcart">
-                            <div class="box-sum-cart">
-                                <p class="cart-sum-title">Tổng :</p>
-                                <p class="cart-sum">1,630,000VNĐ</p>
-                            </div>
-                            <div class="cart-link">
-                                <a href="#" class="btn btn-checkout">CHECKOUT</a>
-                                <a href="#" class="btn btn-yourcart">YOUR CART</a>
-                            </div>
+
+                    <div class="footer-bottom">
+                        <div class="copy-right">
+                            <p>Design and develop by Mona Media</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
 
         <!-- scroll top 1 -->
         <div class="scroll-top"></div>
@@ -611,6 +697,8 @@
     <script src="./js/libs/lightgallery/lightgallery-all.min.js"></script>
     <!-- popup -->
     <script src="./js/libs/popup/jquery.magnific-popup.js"></script>
+    <!-- video -->
+    <script src="./js/libs/fluidplayer/fluidplayer.js"></script>
     <!-- Style -->
     <script src="./js/style.js" type="module" defer></script>
 </body>

@@ -69,9 +69,9 @@ export default function SlideModule(){
                 observer: true,
                 observeParents: true,
                 observeSlideChildren: true,
-                autoplay: {
-                    delay: 4000,
-                },
+                // autoplay: {
+                //     delay: 4000,
+                // },
 
                 pagination: {
                     el: pagination,

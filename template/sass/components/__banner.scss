@@ -1,4 +1,4 @@
-.banner {
+.banners {
 	.swiper-wrapper {
 		margin: 0;
 	}
@@ -20,5 +20,38 @@
 	.swiper-pagination {
 		position: absolute;
 		bottom: 0;
+		.swiper-pagination-bullet{
+			background-color: $w-cl;
+			opacity: 1;
+			width: 8px;
+			height: 8px;
+			margin: 0 7px;
+	
+			&-active{
+				background-color: $main-cl;
+			}
+		}
+	}
+
+	color: $w-cl;
+	.banners-inner{
+		height: 700px;
+		display: flex;
+		// align-items: center;
+		.banners-title{
+			line-height: 1.2;
+			margin-bottom: 30px;
+		}
+
+		.banners-desc{
+			line-height: 1.5;
+		}
+
+		.banners-video{
+			video{
+				width: 370px;
+			}
+		}
+		
 	}
 }
