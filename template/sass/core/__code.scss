@@ -14,3 +14,25 @@
     font-family: 'Dancing Script';
 }
 
+.seami-label{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before , &::after{
+        content: '';
+        background-color: $main-cl;
+        width: 30px;
+        height: 1px;
+        border-radius: 99px;
+        display: block;
+    }
+
+    &::before{
+        margin-right: 10px;
+    }
+
+    &::after{
+        margin-left: 10px;
+    }
+}
