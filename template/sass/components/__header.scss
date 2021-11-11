@@ -4,6 +4,11 @@
     z-index: 900;
     background-color: $w-cl;
     transition: all .3s ease-in;
+    overflow: hidden;
+
+    @include max-media($bk-d-1200) {
+        box-shadow: 10px 10px 20px rgba($color: $b-cl, $alpha: 0.16);
+    }
 
     &.--fix {
         position: fixed;
@@ -14,6 +19,7 @@
         box-shadow: 10px 10px 20px rgba($color: $b-cl, $alpha: 0.16);
         animation: fixedMenu 0.6s;
     }
+
 }
 
 
@@ -749,6 +755,22 @@
             }
 
             .mega-back-link {
+                padding-left: 45px;
+                color: $main-cl;
+
+                &::before {
+                    content: '\f08b  ';
+                    font-family: 'Fontawesome';
+                    width: auto;
+                    height: auto;
+                    font-size: 18px;
+                    @include visible;
+                    transform: translateY(-50%) scaleX(-1);
+                    background-color: transparent;
+                    transition: all .3s ease;
+                    left: 20px;
+
+                }
 
                 &::after {
                     display: none;
@@ -792,7 +814,7 @@
                 @include hidden;
             }
 
-            
+
         }
     }
 
@@ -835,9 +857,9 @@
             }
         }
 
-        &.show{
-            @include max-media($bk-d-1200){
-                &::after{
+        &.show {
+            @include max-media($bk-d-1200) {
+                &::after {
                     transform: rotate(0deg);
 
                 }
@@ -854,10 +876,11 @@
         padding: 25px 25px 25px 25px;
         transform: scale(.8);
         @include hidden;
-        @include min-media($bk-1200){
+
+        @include min-media($bk-1200) {
             transition: all .3s ease;
         }
-        
+
 
         @include max-media($bk-d-1200) {
             width: 100%;

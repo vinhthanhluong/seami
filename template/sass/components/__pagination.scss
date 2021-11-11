@@ -1,19 +1,18 @@
 .pagination {
-	margin-top: 30px;
+	margin-top: 45px;
 	text-align: center;
 	li {
 		display: inline-block;
 		vertical-align: middle;
 		.page-numbers {
-			width: 40px;
-			height: 40px;
+			width: 46px;
+			height: 46px;
 			border-radius: 100%;
-			border: 1px solid $border-cl;
-			//color: $t-b-cl;
 			font-weight: bold;
 			transition: all .3 ease;
 			@include lh(24, 14);
 			@include flex-mid;
+			font-family: 'HJ Gotham Round';
 			&.current {
 				background-color: $main-cl;
 				color: $t-w-cl;

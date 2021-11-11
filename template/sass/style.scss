@@ -4,6 +4,7 @@
 @import url(../font/Nunito/stylesheet.css);
 @import url(../font/Dancing-Script/stylesheet.css);
 @import url(../font/Nunito_Sans/stylesheet.css);
+@import url(../font/HJGothamRound/stylesheet.css);
 //Libraries
 @import url(../js/libs/aos/aos.css);
 @import url(../js/libs/wow/wow.css);
@@ -44,7 +45,8 @@
 // Page
 @import './page/_home';
 @import './page/_404';
-
+@import './page/_doingu-giaovien';
+@import './page/_dongngu-giaovien-detail';
 
 
 

@@ -43,9 +43,18 @@ html {
 .mfp-content {
 	max-width: 600px;
 	.mfp-close {
-		color: $main-cl;
 		transition: 0.3s;
 		right: 0;
+		width: 20px;
+		height: 20px;
+		background-color: $main-cl;
+		color: $w-cl;
+		border-radius: 100%;
+		top: 15px;
+		right: 15px;
+		line-height: 20px;
+		font-size: 16px;
+		opacity: 1;
 	}
 	.popup-wrap {
 		@include flex-mid;

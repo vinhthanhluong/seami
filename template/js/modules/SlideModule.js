@@ -1,4 +1,4 @@
-export default function SlideModule(){
+export default function SlideModule() {
     function slide() {
         let width = $(window).width();
         //console.log(width);
@@ -90,6 +90,78 @@ export default function SlideModule(){
     })
 
 
+    if (document.querySelector('.swiper-effect')) {
+        const swiper = document.querySelector('.swiper-effect');
+        const sliderContainer = swiper.querySelector('.swiper');
+        const SliderPagination = swiper.querySelector('.swiper-pagination');
+        const sliderPrevBtn = swiper.querySelector('.swiper-button-prev');
+        const sliderNextBtn = swiper.querySelector('.swiper-button-next');
+        try {
+            const swiper = new Swiper(sliderContainer, {
+                speed: 1000,
+                loop: true,
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                // coverflowEffect: {
+                //     rotate: -20,
+                //     stretch: -25,
+                //     depth: 100,
+                //     modifier: 1,
+                //     slideShadows: true,
+                // },
+
+
+               
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+
+
+                breakpoints: {
+                    320: {
+                        coverflowEffect: {
+                            rotate: -20,
+                            stretch: -10,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: true,
+                        },
+                    },
+                    480: {
+                        coverflowEffect: {
+                            rotate: -20,
+                            stretch: -15,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: true,
+                        },
+                    },
+                    1200: {
+                        coverflowEffect: {
+                            rotate: -20,
+                            stretch: -25,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: true,
+                        },
+
+                    }
+                }
+                // observeParents:true,
+                // observeSlideChildren: true,
+                // observer: true,
+            })
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
     if (document.querySelector('.swiper-demo')) {
         const swiper = document.querySelector('.swiper-demo');
         const sliderContainer = swiper.querySelector('.swiper');
@@ -99,37 +171,37 @@ export default function SlideModule(){
         try {
             const swiper = new Swiper(sliderContainer, {
                 speed: 1000,
-                    loop: true,
-                    spaceBetween: 20,
-                    slidesPerView: 2,
-                    // autoplay: {
-                    //     delay: 4000,
+                loop: true,
+                spaceBetween: 20,
+                slidesPerView: 2,
+                // autoplay: {
+                //     delay: 4000,
+                // },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                breakpoints: {
+                    // 320: {
+                    //     spaceBetween: 50
                     // },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
+                    // 480: {
+                    //     spaceBetween: 30
+                    // },
+                    // 576: {
+                    //     spaceBetween: 0,
 
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-
-                    breakpoints: {
-                        // 320: {
-                        //     spaceBetween: 50
-                        // },
-                        // 480: {
-                        //     spaceBetween: 30
-                        // },
-                        // 576: {
-                        //     spaceBetween: 0,
-
-                        // }
-                    }
-                    // observeParents:true,
-                    // observeSlideChildren: true,
-                    // observer: true,
+                    // }
+                }
+                // observeParents:true,
+                // observeSlideChildren: true,
+                // observer: true,
             })
         }
         catch (err) {

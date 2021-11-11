@@ -1,0 +1,240 @@
+.team-teacher{
+    overflow: hidden;
+    padding: 60px 0 100px;
+    @include max-media($bk-d-1200){
+        padding: 60px 0;
+    }
+
+    @include max-media($bk-d-992){
+        padding: 40px 0;
+    }
+
+    .seami-label{
+        margin-bottom: 5px;
+    }
+
+    .teacher-title{
+        margin-bottom: 30px;
+        font-weight: normal;
+        line-height: 1.4;
+        @include max-media($bk-d-1200){
+            margin-bottom: 20px;
+        }
+        @include max-media($bk-768){
+            margin-bottom: 10px;
+        }
+    }
+
+    .teacher-desc{
+        @include lh(21,14);
+    }
+
+
+    .teacher-list{
+        margin-top: 30px;
+    }
+    
+    .teacher-item{
+        &:hover{
+            .teacher-img{
+                img{
+                    filter: none;
+                }
+                a{
+                    &::before , &::after{
+                        @include visible;
+                    }
+                }
+            }
+
+            .teacher-content{
+                .teacher-name{
+                    color: $main-cl;
+                }
+            }
+        }
+
+        &:not(:first-child){
+            margin-top: 35px;
+            padding-top: 35px;
+            border-top: 1px solid rgba($color: $b-cl, $alpha: .1);
+            @include max-media($bk-d-1200){
+                margin-top: 30px;
+                padding-top: 30px;
+            }
+
+            @include max-media($bk-d-1024){
+                margin-top: 25px;
+                padding-top: 25px;
+            }
+        }
+    }
+
+    .columns{
+        align-items: center;
+        flex-wrap: nowrap;
+        @include max-media($bk-576){
+            flex-wrap: wrap;
+        }
+    }
+
+    .column{
+        &.teacher-ig{
+            width: calc(100% / 12 * 2 + 30px);
+            min-width: 140px;
+            @include max-media($bk-576){
+                width: 100%;
+            }
+        }
+        &.teacher-tx{
+            width: calc(100% / 12 * 8 - 30px);
+            @include max-media($bk-576){
+                width: 100%;
+            }
+        }
+        &.teacher-as{
+            // width: calc(100% / 12 * 2);
+            width: 200px;
+            flex-shrink: 0;
+            @include max-media($bk-d-1200){
+                width: 170px;
+            }
+            @include max-media($bk-d-992){
+                width: 145px;
+            }
+            @include max-media($bk-576){
+                width: 100%;
+            }
+        }
+    }
+
+    .teacher-img{
+        position: relative;
+        @include max-media($bk-576){
+            width: 50%;
+            margin: 0 auto;
+        }
+        a{
+            display: block;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+                background-color: rgba($color: $main-cl, $alpha: .6);
+                transition: all .3s ease;
+                cursor: pointer;
+                @include hidden;
+            }
+            &::after{
+                content: '\f002';
+                font-family: 'Fontawesome';
+                // background-image: url('../img/svg/icon-search.svg');
+                // background-position: center;
+                // background-repeat: no-repeat;
+                @include pos-mid;
+                width: 36px;
+                height: 36px;
+                background-color: $w-cl;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                color: $main-cl;
+                font-weight: normal;
+                cursor: pointer;
+                transition: all .3s ease;
+                @include hidden;
+            }
+        }
+        
+        img{
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 100%;
+            filter: contrast(90%) sepia(40%) grayscale(140%);
+        }
+    }
+
+    .teacher-content{
+        .teacher-job{
+            margin-bottom: 5px;
+        }
+        .teacher-name{
+            margin-bottom: 30px;
+            transition:  all .3s ease;
+            display: block;
+            @include max-media($bk-d-1200){
+                margin-bottom: 20px;
+            }
+            @include max-media($bk-d-1024){
+                margin-bottom: 10px;
+            }
+        }
+
+        .teacher-info{
+            @include lh(21,14);
+            @include min-media($bk-576){
+                @include line-clamp(4);
+            }
+            li{
+                list-style-type:disc;
+                list-style-position: inside;
+                a{
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .teacher-assess{
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .16);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 170px;
+        // padding: 30px;
+        @include max-media($bk-d-1200){
+            height: 140px;
+        }
+        @include max-media($bk-d-992){
+            height: 130px;
+        }
+        .teacher-number{
+            margin-bottom: 15px;
+            @include max-media($bk-d-1200){
+                margin-bottom: 10px;
+            }
+            @include max-media($bk-576){
+                margin-bottom: 5px;
+            }
+        }
+
+        .teacher-star{
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            color: $yel-cl;
+        }
+    }
+
+    .pagination{
+        @include max-media($bk-d-1200){
+            margin-top: 30px;
+        }
+    }
+
+
+    
+}
