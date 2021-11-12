@@ -547,9 +547,9 @@
         .column{
             width: calc(100% / 3);
             @include max-media($bk-d-1024){
-                width: calc(100% /2);
+                width: calc(100% / 2);
             }
-            @include max-media($bk-d-768){
+            @include max-media($bk-576){
                 width: 100%;
             }
         }

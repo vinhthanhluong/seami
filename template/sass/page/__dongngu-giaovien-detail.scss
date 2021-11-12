@@ -1,6 +1,6 @@
 .team-teacher-detail {
     padding: 60px 0 80px;
-
+    overflow: hidden;
     @include max-media($bk-d-1200) {
         padding: 60px 0;
     }
@@ -24,15 +24,31 @@
     .column {
         &.teacher-ig {
             width: calc(100% / 12 * 3);
+            @include max-media($bk-d-992){
+                width: calc(100% / 12 * 3.5);
+            }
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
 
         &.teacher-tx {
             width: calc(100% / 12 * 9);
+            @include max-media($bk-d-992){
+                width: calc(100% / 12 * 8.5);
+            }
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
     }
 
     .teacher-avatar {
         margin-bottom: 15px;
+        @include max-media($bk-d-768){
+            width: 50%;
+            margin: 0 auto 15px;
+        }
 
         img {
             width: 100%;
@@ -50,6 +66,9 @@
 
         .teacher-name {
             margin-bottom: 35px;
+            @include max-media($bk-d-992){
+                margin-bottom: 20px;
+            }
         }
 
         .teacher-contact {
@@ -87,25 +106,63 @@
         }
     }
 
-    .teacher-box {
+    .teacher-inner{
         padding-left: 40px;
+        @include max-media($bk-d-1200){
+            padding-left: 20px;
+        }
+        @include max-media($bk-d-992){
+            padding-left: 10px;
+        }
+        @include max-media($bk-d-768){
+            padding-left: 0;
+        }
+    }
+
+    .teacher-box {
 
         &:not(:first-child) {
             margin-top: 25px;
+            @include max-media($bk-d-1024){
+                margin-top: 20px;
+            }
         }
 
         .teacher-tt {
             margin-bottom: 15px;
+            @include max-media($bk-d-1024){
+                margin-bottom: 10px;
+            }
         }
 
         .teacher-cols {
             display: flex;
+            flex-wrap: wrap;
             margin: 0 -25px;
+            @include max-media($bk-d-1200){
+                margin:  0 -15px;
+            }
+            @include max-media($bk-d-992){
+                margin: 0;
+            }
         }
 
         .teacher-col {
             width: 50%;
             padding: 0 25px;
+            @include max-media($bk-d-1200){
+                padding: 0 15px;
+            }
+            @include max-media($bk-d-992){
+                width: 100%;
+                padding: 0;
+            }
+
+            &.mt-20{
+                @include max-media($bk-d-992){
+                    margin-top: 20px;
+                }
+            }
         }
 
         .teacher-desc {
@@ -147,6 +204,10 @@
 .white-popup-block {
     &.block-t-contact {
         padding: 25px;
+        border-radius: 4px;
+        @include max-media($bk-d-768){
+            padding: 20px;
+        }
 
         .mfp-close {
             top: 15px;
@@ -165,20 +226,38 @@
         }
     }
 
-    .teacher-form {}
 
     .teacher-group {
         width: 100%;
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         &:not(:first-child) {
             margin-top: 35px;
+            @include max-media($bk-d-1024){
+                margin-top: 25px;
+            }
+            @include max-media($bk-d-768){
+                margin-top: 0;
+            }
+        }
+
+        &:first-child{
+            .teacher-f{
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
         }
 
         .teacher-f {
             width: calc(50% - 15px);
+            @include max-media($bk-d-768){
+                width: 100%;
+                margin-top: 25px;
+            }
         }
     }
 
@@ -242,6 +321,9 @@
 
     .mt-35 {
         margin-top: 35px;
+        @include max-media($bk-d-1024){
+            margin-top: 25px;
+        }
     }
 
     textarea.f-control {
@@ -250,6 +332,9 @@
         padding: 20px 25px;
         height: 100px !important;
         resize: none;
+        @include max-media($bk-d-768){
+            padding: 10px 15px;
+        }
 
         &::placeholder {
             color: rgba($color: $b-cl, $alpha: .6);
@@ -264,6 +349,9 @@
 
     .teacher-accept {
         margin-top: 23px;
+        @include max-media($bk-d-768){
+            margin-top: 15px;
+        }
 
         .label {
             input {
@@ -322,6 +410,9 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        @include max-media($bk-d-768){
+            margin-top: 15px;
+        }
 
         &:hover {
             color: $main-cl;

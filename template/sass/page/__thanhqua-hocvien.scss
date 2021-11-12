@@ -12,6 +12,9 @@
         @include max-media($bk-d-1200){
             margin-bottom: 30px;
         }
+        @include max-media($bk-d-768){
+            margin-bottom: 20px;
+        }
 
         .seami-label{
             justify-content: center;
@@ -19,6 +22,12 @@
     }
     .column{
         width: calc(100% / 3);
+        @include max-media($bk-d-1200){
+            width: calc(100% / 2);
+        }
+        @include max-media($bk-576){
+            width: 100%;
+        }
     }
     .achi-box{
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .16);
@@ -54,6 +63,9 @@
             align-items: center;
             margin-top: auto;
             background-color: $w-cl;
+            @include max-media($bk-d-768){
+                padding: 10px 15px;
+            }
 
             .achi-avatar{
                 img{
@@ -61,12 +73,22 @@
                     height: 60px;
                     border-radius: 100%;
                     max-width: 100%;
+                    @include max-media($bk-d-768){
+                        width: 50px;
+                        height: 50px;
+                    }
                 }
             }
 
             .achi-act{
                 padding-left: 13px;
             }
+        }
+    }
+
+    .pagination{
+        @include max-media($bk-d-1200){
+            margin-top: 30px;
         }
     }
 }

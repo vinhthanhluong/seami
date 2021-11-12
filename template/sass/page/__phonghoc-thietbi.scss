@@ -20,6 +20,9 @@
         @include max-media($bk-d-1200) {
             margin-bottom: 30px;
         }
+        @include max-media($bk-d-1024){
+            margin-bottom: 20px;
+        }
     }
 
     .room-inner {
@@ -86,6 +89,9 @@
         margin: 0 auto;
         margin-bottom: 20px;
         margin: -5px;
+        @include max-media($bk-d-1200){
+            margin: 0;
+        }
 
         &::after {
             content: '';
@@ -97,6 +103,9 @@
     .grid-sizer,
     .grid-item {
         width: 25%;
+        @include max-media($bk-d-992){
+            width: 50%;
+        }
     }
 
 
@@ -118,5 +127,8 @@
 
     .grid-item--height1 {
         // height: 585px;
+        // @include min-media($bk-768){
+        //     min-height: 369px;
+        // }
     }
 }
