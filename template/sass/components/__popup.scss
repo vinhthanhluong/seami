@@ -50,17 +50,23 @@ html {
 		background-color: $main-cl;
 		color: $w-cl;
 		border-radius: 100%;
-		top: 15px;
-		right: 15px;
+		top: 50px;
+		right: 10px;
 		line-height: 20px;
 		font-size: 16px;
 		opacity: 1;
+		text-align: center;
+		padding: 0;
 	}
 	.popup-wrap {
 		@include flex-mid;
 		> div {
 			width: 100%;
 		}
+	}
+
+	.mfp-counter{
+		display: none;
 	}
 }
 .stop-scrolling {

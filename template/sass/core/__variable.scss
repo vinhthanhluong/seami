@@ -23,9 +23,15 @@ $bg-g-cl: $g-cl;
 $main-cl: #EA412C;
 $blue-cl: #145FAA;
 $yel-cl:#FFC107;
+$green-cl: #4DBBAA;
+$yellow-cl:#F89E1B;
+$ble-cl:#2EA3DD;
+
 $border-cl: #e1e1e1;
 $g-E5E5-cl:#E5E5E5;
 $g-C0C0-cl:#C0C0C0;
+$g-F8F8-cl:#F8F8F8;
+$g-7070-cl:#707070;
 
 
 //font-famili , font-size
@@ -37,6 +43,7 @@ $cl-body: #000000;
 
 
 //break point
+$bk-1900: 1900px;
 $bk-1440: 1440px;
 $bk-1400: 1400px;
 $bk-1200: 1200px;
@@ -44,6 +51,7 @@ $bk-1024: 1024px;
 $bk-992: 992px;
 $bk-768: 768px;
 $bk-576: 576px;
+$bk-400: 400px;
 
 //break point - 1
 $bk-d-1440: $bk-1440 - 1;

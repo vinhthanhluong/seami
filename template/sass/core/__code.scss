@@ -10,20 +10,21 @@
     display: none;
 }
 
-.f-dancing{
+.f-dancing {
     font-family: 'Dancing Script';
 }
 
-.f-round{
+.f-round {
     font-family: 'HJ Gotham Round';
 }
 
-.seami-label{
+.seami-label {
     position: relative;
     display: flex;
     align-items: center;
 
-    &::before , &::after{
+    &::before,
+    &::after {
         content: '';
         background-color: $main-cl;
         width: 30px;
@@ -32,11 +33,210 @@
         display: block;
     }
 
-    &::before{
+    &::before {
         margin-right: 10px;
     }
 
-    &::after{
+    &::after {
         margin-left: 10px;
+    }
+}
+
+.class-box {
+    background-color: $w-cl;
+    border-radius: 6px;
+    transition: all .3s ease;
+    box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .16);
+
+    &:hover {
+
+        .class-img {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        .class-content {
+            .class-tt {
+                color: $main-cl;
+            }
+
+            .class-footer {
+                .class-signup {
+                    color: $main-cl;
+
+                    &::before {
+                        @include visible;
+                    }
+                }
+                .class-signup {
+                    padding-right: 30px;
+        
+                    &::after {
+                        @include visible;
+        
+                    }
+                }
+            }
+        }
+
+       
+    }
+
+    .class-img {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 6px 6px 0 0;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px 4px 0 0;
+            transition: all .3s ease;
+        }
+    }
+
+    .class-content {
+        padding: 13px 25px 25px;
+
+        @include max-media($bk-d-1024) {
+            padding: 15px 20px 20px;
+        }
+
+        .class-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 13px;
+
+            .class-label {
+                font-size: 12px;
+                line-height: 1.3;
+                color: $w-cl;
+                padding: 5px 10px 3px;
+                border-radius: 99px;
+                font-weight: 300;
+
+                &.label-red {
+                    background-color: $main-cl;
+                }
+
+                &.label-green {
+                    background-color: $green-cl;
+                }
+
+                &.label-blue {
+                    background-color: $blue-cl;
+                }
+
+                &.label-yellow {
+                    background-color: $yellow-cl;
+                }
+            }
+
+            .class-star {
+                i {
+                    color: $yel-cl;
+                }
+            }
+        }
+
+        .class-tt {
+            line-height: 1.3;
+            transition: all .3s ease;
+            margin-bottom: 13px;
+            @include line-clamp(2);
+
+        }
+
+        .class-course {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 13px;
+
+            .course-box {
+                display: flex;
+
+                &:nth-child(2) {
+                    .course-icon {
+                        background-color: $ble-cl;
+                    }
+                }
+            }
+
+            .course-icon {
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                background-color: $green-cl;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .course-text {
+                padding-left: 10px;
+                font-weight: 300;
+            }
+        }
+
+        .class-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 13px;
+            border-top: 1px solid rgba($color: $main-cl, $alpha: .2);
+
+            @include max-media($bk-d-768) {
+                padding-top: 20px;
+            }
+
+            .class-price {
+                display: flex;
+                align-items: center;
+
+                .price-icon {
+                    width: 20px;
+                    height: 20px;
+                    background-color: $yellow-cl;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .price-text {
+                    padding-left: 10px;
+                }
+            }
+
+            .class-signup {
+                color: rgba($color: $b-cl, $alpha: .5);
+                transition: all .3s ease;
+                position: relative;
+
+
+
+                &::after {
+                    content: '';
+                    transition: all .3s ease;
+                    background-image: url('../img/svg/icon-arrow-left.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    @include hidden;
+                }
+
+            }
+        }
+
     }
 }

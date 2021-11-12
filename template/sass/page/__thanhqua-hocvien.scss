@@ -1,0 +1,72 @@
+.achi-student{
+    padding: 60px 0 100px;
+    @include max-media($bk-d-1200){
+        padding: 60px 0;
+    }
+    @include max-media($bk-d-992){
+        padding: 40px 0;
+    }
+    .achi-head{
+        text-align: center;
+        margin-bottom: 40px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 30px;
+        }
+
+        .seami-label{
+            justify-content: center;
+        }
+    }
+    .column{
+        width: calc(100% / 3);
+    }
+    .achi-box{
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .16);
+        border-radius: 4px;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: $g-F8F8-cl;
+        transition: all .3s ease;
+        &:hover{
+            background-color: $main-cl;
+            .achi-text{
+                color: $w-cl;
+            }
+        }
+
+
+        .achi-text{
+            padding: 25px;
+            transition: all .3s ease;
+            .achi-t{
+                font-weight: 300;
+                font-style: italic;
+                line-height: 1.7;
+                @include line-clamp(4);
+            }
+        }
+
+        .achi-info{
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+            background-color: $w-cl;
+
+            .achi-avatar{
+                img{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 100%;
+                    max-width: 100%;
+                }
+            }
+
+            .achi-act{
+                padding-left: 13px;
+            }
+        }
+    }
+}

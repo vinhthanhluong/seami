@@ -1,0 +1,61 @@
+.find-class{
+    padding: 60px 0 100px;
+    @include max-media($bk-d-1200){
+        padding: 60px 0;
+    }
+    @include max-media($bk-d-992){
+        padding: 40px 0;
+    }
+
+    .seami-label{
+        margin-bottom: 5px;
+        justify-content: center;
+    }
+    .class-head{
+        text-align: center;
+        margin-bottom: 23px;
+    }
+
+    .class-tab{
+        width: 100%;
+
+        .column{
+            width: calc(100% / 3);
+        }
+
+        
+
+    }
+
+    .tab{
+        .tab-link{
+            justify-content: center;
+            border: 1px solid $main-cl;
+            border-radius: 99px;
+            width: max-content;
+            margin: 0 auto;
+            padding: 5px;
+        }
+
+        .tab-title{
+            padding: 10px 24px 11px;
+            font-weight: bold;
+            &.active{
+                color: $w-cl;
+                background-color: $main-cl;
+                border-radius: 99px;
+            }
+        }
+    }
+
+    .tab-tt{
+       margin-bottom: 30px;
+
+
+    }
+
+    
+
+
+
+}

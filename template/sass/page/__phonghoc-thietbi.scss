@@ -1,0 +1,122 @@
+.classroom {
+    padding: 60px 0 100px;
+
+    @include max-media($bk-d-1200) {
+        padding: 60px 0;
+    }
+
+    @include max-media($bk-d-992) {
+        padding: 40px 0;
+    }
+
+    .seami-label {
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .room-head {
+        margin-bottom: 40px;
+
+        @include max-media($bk-d-1200) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .room-inner {
+        border-radius: 4px;
+        height: 100%;
+        width: 100%;
+        a {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            &:hover{
+                &::after{
+                    @include visible;
+                }
+                .room-icon{
+                    @include visible;
+                }
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: $main-cl, $alpha: .6);
+                transition: all .3s ease;
+                @include hidden;
+            }
+
+            .room-icon {
+                @include pos-mid;
+                z-index: 1;
+                transition: all .3s ease;
+                @include hidden;
+
+                &:before {
+                    content: '';
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 100%;
+                    background-color: $w-cl;
+                    @include pos-mid;
+                    z-index: -1;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+
+    .grid {
+        border-radius: 0;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin: -5px;
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    .grid-sizer,
+    .grid-item {
+        width: 25%;
+    }
+
+
+    .grid-item {
+        height: auto;
+        float: left;
+        border: none;
+        border-radius: 0%;
+        background-color: $w-cl;
+        // height: 292.5px;
+        padding: 5px;
+
+    }
+
+
+    .grid-item--width1 {
+        width: 50%;
+    }
+
+    .grid-item--height1 {
+        // height: 585px;
+    }
+}
