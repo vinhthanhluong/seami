@@ -45,7 +45,7 @@
             padding: 10px;
             text-transform: uppercase;
     
-            @include max-media($bk-576) {
+            @include max-media($bk-d-768) {
                 display: block;
             }
             
@@ -62,10 +62,10 @@
         }
 
         .tab-link {
-            @include max-media($bk-576) {
+            @include max-media($bk-d-768) {
                 border: none;
                 display: block;
-                background-color: $bg-w-cl;
+                background-color: rgba($color: $main-cl, $alpha: .1);
                 padding: 10px;
             }
         }
@@ -78,27 +78,27 @@
                 padding: 20px;
             }
 
-            @include max-media($bk-576) {
+            @include max-media($bk-d-768) {
                 padding: 8px 10px;
             }
 
             &:first-child {
                 padding-left: 0;
 
-                @include max-media($bk-576) {
+                @include max-media($bk-d-768) {
                     padding-left: 10px;
                 }
             }
 
             &.active {
-                @include max-media($bk-576) {
+                @include max-media($bk-d-768) {
                     background-color: wheat;
                 }
             }
         }
 
         .tab-line{
-            @include max-media($bk-576) {
+            @include max-media($bk-d-768) {
                 display: none;
             }
         }

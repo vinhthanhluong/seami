@@ -1,20 +1,27 @@
 .seami-public {
     padding: 60px 0 100px;
-    @include max-media($bk-d-1200){
+
+    @include max-media($bk-d-1200) {
         padding: 60px 0;
     }
 
-    @include max-media($bk-d-1024){
+    @include max-media($bk-d-1024) {
         padding: 40px 0;
     }
 
-    .column{
-        &.lic-main{
+    .column {
+        &.lic-main {
             width: calc(100% / 12 * 8 - 30px);
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
 
-        &.lic-sibar{
+        &.lic-sibar {
             width: calc(100% / 12 * 4 + 30px);
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
     }
 
@@ -62,7 +69,8 @@
                 height: 100%;
                 text-align: right;
                 width: 30px;
-                img{
+
+                img {
                     margin-left: auto;
                 }
             }
@@ -91,6 +99,7 @@
             .catalog-item {
                 padding: 15px 0;
                 cursor: pointer;
+
                 @include max-media($bk-d-1024) {
                     padding: 10px 0;
                 }
@@ -193,7 +202,8 @@
                     @include line-clamp(2);
                     @include fz-16;
                     transition: all .3s ease;
-                    @include max-media($bk-d-1200){
+
+                    @include max-media($bk-d-1200) {
                         margin-bottom: 7px;
                     }
                 }
@@ -240,6 +250,7 @@
                 text-align: center;
                 transition: all .3s ease;
                 line-height: 1.7;
+
                 &:hover {
                     color: $w-cl;
                     background-color: $main-cl;
@@ -250,44 +261,58 @@
     }
 
 
-    .lic-head{
+    .lic-head {
         margin-bottom: 30px;
-        @include max-media($bk-d-1200){
+
+        @include max-media($bk-d-1200) {
             margin-bottom: 20px;
         }
     }
 
-    .lic-inner{
+    .lic-inner {
         padding-right: 40px;
 
-        .lic-content{
-            .column{
+        @include max-media($bk-d-1200) {
+            padding-right: 10px;
+        }
+        @include max-media($bk-d-768){
+            padding-right: 0;
+        }
+
+        .lic-content {
+            .column {
                 width: 50%;
+                @include max-media($bk-d-992){
+                    width: 100%;
+                }
             }
         }
 
-        
-        .lic-box{
+
+        .lic-box {
             border-radius: 4px;
             box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .16);
-            &:hover{
-                .lic-tt{
+
+            &:hover {
+                .lic-tt {
                     color: $main-cl;
                 }
 
-                .lic-act{
-                    .lic-more{
+                .lic-act {
+                    .lic-more {
                         padding-right: 13px;
-                        &::after{
+
+                        &::after {
                             @include visible;
                         }
                     }
                 }
             }
 
-            .lic-img{
+            .lic-img {
                 transition: all .3s e;
-                img{
+
+                img {
                     width: 100%;
                     height: 100%;
                     max-width: 100%;
@@ -295,52 +320,76 @@
                 }
             }
 
-            .lic-con{
+            .lic-con {
                 padding: 13px 25px 20px;
+
+                @include max-media($bk-d-992) {
+                    // padding: 10px 15px;
+                }
             }
 
-            .lic-info{
+            .lic-info {
                 display: flex;
                 align-items: center;
                 margin-bottom: 13px;
-                .lic-avatar{
-                    img{
+
+                // @include max-media($bk-d-768) {
+                //     margin-bottom: 10px;
+                // }
+
+                .lic-avatar {
+                    img {
                         width: 40px;
                         height: 40px;
                         border-radius: 100%;
                     }
                 }
 
-                .lic-name{
+                .lic-name {
                     padding-left: 13px;
                 }
             }
 
-            .lic-tt{
+            .lic-tt {
                 display: block;
                 margin-bottom: 13px;
-                @include lh(24,16);
+                @include lh(24, 16);
                 transition: all .3s ease;
                 @include line-clamp(2);
+
+                // @include max-media($bk-d-992) {
+                //     margin-bottom: 10px;
+                // }
             }
 
-            .lic-desc{
+            .lic-desc {
                 @include line-clamp(2);
                 margin-bottom: 22px;
+
+                @include max-media($bk-d-992) {
+                    margin-bottom: 15px;
+                }
             }
 
-            .lic-act{
+            .lic-act {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                .lic-more{
+
+                // @include max-media($bk-d-992) {
+                //     flex-direction: column-reverse;
+                //     align-items: flex-start;
+                // }
+
+                .lic-more {
                     display: inline-block;
                     font-size: 12px;
                     font-weight: bold;
                     color: $main-cl;
                     position: relative;
                     transition: all .3s ease;
-                    &::after{
+
+                    &::after {
                         content: '';
                         width: 16px;
                         height: 16px;
@@ -352,21 +401,23 @@
                         right: 0;
                         transform: translateY(-50%);
                         transition: all .3s ease;
-                        transform: translate(100% , -50%);
+                        transform: translate(100%, -50%);
                         @include hidden;
                     }
                 }
-                .act-rt{
+
+                .act-rt {
                     display: flex;
                     align-items: center;
 
-                    .lic-share{
+                    .lic-share {
                         padding-right: 25px;
                     }
 
-                    .lic-like{
+                    .lic-like {
                         cursor: pointer;
-                        &::before{
+
+                        &::before {
                             content: '\f08a ';
                             font-family: 'Fontawesome';
                             color: $main-cl;
@@ -376,13 +427,13 @@
                         }
 
                         &:hover {
-                            &::before{
+                            &::before {
                                 content: '\f004';
                             }
                         }
 
-                        &.active{
-                            &::before{
+                        &.active {
+                            &::before {
                                 content: '\f004';
                             }
                         }
@@ -395,7 +446,13 @@
 
         }
 
-        
+
+    }
+
+    .pagination{
+        @include max-media($bk-d-1200){
+            margin-top: 30px;
+        }
     }
 
 

@@ -1,0 +1,54 @@
+.gallery-seami {
+    padding: 60px 0 100px;
+
+    @include max-media($bk-d-1200) {
+        padding: 60px 0;
+    }
+
+    @include max-media($bk-d-992) {
+        padding: 40px 0;
+    }
+
+    .gallery-head {
+        margin-bottom: 40px;
+
+        @include max-media($bk-d-1200) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .seami-label {
+        justify-content: center;
+    }
+
+    .gallery-content {
+        width: 100%;
+
+    }
+
+    .grid-sizer,
+    .grid-item {
+        width: 25%;
+        // @include max-media($bk-d-992){
+        //     width: 50%;
+        // }
+    }
+
+
+    .grid-item {
+        height: auto;
+        float: left;
+        border: none;
+        border-radius: 0%;
+        background-color: $w-cl;
+        // height: 292.5px;1
+        padding: 5px;
+        display: inline-block;
+
+    }
+    .grid-item--width1 {
+        width: 50%;
+    }
+
+
+}

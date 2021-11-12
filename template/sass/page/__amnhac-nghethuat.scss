@@ -1,46 +1,65 @@
-.find-class{
+.find-class {
     padding: 60px 0 100px;
-    @include max-media($bk-d-1200){
+
+    @include max-media($bk-d-1200) {
         padding: 60px 0;
     }
-    @include max-media($bk-d-992){
+
+    @include max-media($bk-d-992) {
         padding: 40px 0;
     }
 
-    .seami-label{
+    .seami-label {
         margin-bottom: 5px;
         justify-content: center;
     }
-    .class-head{
+
+    .class-head {
         text-align: center;
         margin-bottom: 23px;
+
+        @include max-media($bk-d-1024) {
+            margin-bottom: 15px;
+        }
     }
 
-    .class-tab{
+    .class-tab {
         width: 100%;
 
-        .column{
+        .column {
             width: calc(100% / 3);
+
+            @include max-media($bk-d-1024) {
+                width: calc(100% / 2);
+            }
+
+            @include max-media($bk-576){
+                width: 100%;
+            }
         }
-
-        
-
     }
 
-    .tab{
-        .tab-link{
-            justify-content: center;
-            border: 1px solid $main-cl;
-            border-radius: 99px;
-            width: max-content;
-            margin: 0 auto;
-            padding: 5px;
+    .tab {
+        .tab-link {
+            @include min-media($bk-768) {
+                justify-content: center;
+                border: 1px solid $main-cl;
+                border-radius: 99px;
+                width: max-content;
+                margin: 0 auto;
+                padding: 5px;
+            }
         }
 
-        .tab-title{
+        .tab-title {
             padding: 10px 24px 11px;
             font-weight: bold;
-            &.active{
+
+            @include max-media($bk-d-992) {
+                padding: 10px 15px;
+            }
+
+            &.active {
                 color: $w-cl;
                 background-color: $main-cl;
                 border-radius: 99px;
@@ -48,13 +67,29 @@
         }
     }
 
-    .tab-tt{
-       margin-bottom: 30px;
+    .tab-tt {
+        margin-bottom: 30px;
 
+        @include max-media($bk-d-1024) {
+            margin-bottom: 20px;
+        }
 
     }
 
-    
+    .pagination {
+        @include max-media($bk-d-1200) {
+            margin-top: 30px;
+        }
+    }
+
+    .class-box{
+
+        .class-content{
+            padding: 15px;
+        }
+    }
+
+
 
 
 
