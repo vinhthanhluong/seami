@@ -1,0 +1,44 @@
+.information-website{
+    padding: 60px 0 100px;
+    overflow: hidden;
+    @include max-media($bk-d-1200){
+        padding: 60px 0;
+    }
+    @include max-media($bk-d-992){
+        padding: 40px 0;
+    }
+
+    .web-head{
+        margin-bottom: 30px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 20px;
+        }
+        @include max-media($bk-d-768){
+            margin-top: 15px;
+        }
+
+        .seami-label{
+            justify-content: center;
+        }
+
+    }
+
+    .web-list{
+        .web-item{
+            &:not(:first-child){
+                margin-top: 20px;
+                @include max-media($bk-d-768){
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        .web-link{
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+}

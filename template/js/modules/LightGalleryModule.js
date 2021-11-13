@@ -2,7 +2,7 @@ export default function LightGalleryModule(){
     if ($('#lightgallery').length) {
 
         $("#lightgallery").lightGallery({
-            // selector: ".zoom-lightgallery",
+            selector: ".gallery-img",
             thumbnail: true,
             // animateThumb: false,
             // showThumbByDefault: false

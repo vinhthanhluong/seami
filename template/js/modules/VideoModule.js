@@ -11,9 +11,9 @@ export default function VideoModule() {
                 "allowDownload": false,
                 "playButtonShowing": true,
                 "fillToContainer": false,
-                "primaryColor": "white",
+                "primaryColor": "#EA412C",
                 // "posterImage": "",
-                "posterImage": './img/bg-video.png' // Default false
+                "posterImage": './img/bg-post-video.png' // Default false
             },
             }
         );
