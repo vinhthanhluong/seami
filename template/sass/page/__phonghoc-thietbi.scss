@@ -1,6 +1,6 @@
 .classroom {
     padding: 60px 0 100px;
-
+    overflow: hidden;
     @include max-media($bk-d-1200) {
         padding: 60px 0;
     }

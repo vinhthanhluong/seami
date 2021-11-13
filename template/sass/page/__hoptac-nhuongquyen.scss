@@ -26,7 +26,10 @@
         margin-bottom: 30px;
 
         @include max-media($bk-d-1200) {
-            // margin-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        @include max-media($bk-d-992) {
+            margin-bottom: 10px;
         }
     }
 
@@ -34,10 +37,20 @@
         max-width: calc(100% / 12 * 8);
         max-width: 780px;
         margin: 0 auto 30px;
+        @include max-media($bk-d-1024){
+            margin-bottom: 20px;
+        }
+        
     }
 
     .column {
         width: calc(100% / 3);
+        @include max-media($bk-d-1024){
+            width: calc(100% / 2);
+        }
+        @include max-media($bk-576){
+            width: 100%;
+        }
     }
 
     .brand-box {
@@ -45,6 +58,9 @@
 
         .brand-img {
             margin-bottom: 20px;
+            @include max-media($bk-d-1024){
+                margin-bottom: 15px;
+            }
 
             img {
                 margin: 0 auto;
@@ -54,6 +70,10 @@
         .brand-tt {
             margin-bottom: 15px;
             line-height: 1.2;
+            text-transform: capitalize;
+            @include max-media($bk-d-1024){
+                margin-bottom: 10px;
+            }
         }
 
         .brand-desc {
@@ -69,6 +89,70 @@
 
 .franchise-seami {
     background-color: rgba($color: $blue-cl, $alpha: .05);
+    overflow: hidden;
+    .seami-label {
+        margin-bottom: 5px;
+    }
+
+    .fran-head {
+        max-width: 770px;
+        margin-bottom: 30px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 20px;
+        }
+
+        @include max-media($bk-d-768){
+            margin-bottom: 10px;
+        }
+    }
+
+    .columns {
+        margin: -35px;
+
+        @include max-media($bk-d-1200) {
+            margin: -15px;
+        }
+        @include max-media($bk-d-992) {
+            margin: -7.5px;
+        }
+    }
+
+    .column {
+        width: 50%;
+        padding: 35px;
+
+        @include max-media($bk-d-1200) {
+            padding: 15px;
+        }
+        @include max-media($bk-d-992) {
+            padding: 7.5px;
+        }
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
+
+    }
+
+    .mona-content{
+        p{
+            margin: 0;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        h4{
+            margin: 0;
+        }
+        ul{
+            margin: 0;
+            li{
+                list-style-type: disc;
+                list-style-position: inside;
+                font-weight: 300;
+            }
+        }
+    }
+
+
 
 }
 
@@ -102,7 +186,7 @@
 
         &:first-child {
             border-right: 1px solid rgba($color: $b-cl, $alpha: .1);
-            
+
             @include max-media($bk-d-768) {
                 border-bottom: 1px solid rgba($color: $b-cl, $alpha: .1);
                 border-right: none;
@@ -195,10 +279,13 @@
     position: relative;
     color: $w-cl;
     padding: 68px 0;
-    @include max-media($bk-d-1200){
+    overflow: hidden;
+
+    @include max-media($bk-d-1200) {
         padding: 60px 0;
     }
-    @include max-media($bk-d-992){
+
+    @include max-media($bk-d-992) {
         padding: 40px 0;
     }
 
@@ -212,14 +299,18 @@
         height: 100%;
     }
 
-    .join-wrapper{
+    .join-wrapper {
         z-index: 1;
         position: relative;
     }
 
     .join-head {
         margin-bottom: 26px;
-        max-width: 650px;
+        max-width: 640px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 20px;
+        }
+       
 
         .seami-label {
             margin-bottom: 5px;
@@ -232,10 +323,63 @@
             @include max-media($bk-d-1024) {
                 margin-bottom: 20px;
             }
+
+            @include max-media($bk-d-768) {
+                margin-bottom: 10px;
+            }
         }
 
         .join-desc {
             font-weight: 300;
+        }
+    }
+
+
+    .join-main{
+        max-width: 640px;
+        .teacher-form{
+            .teacher-f{
+                .label{
+                    color: rgba($color: $w-cl, $alpha: .5);
+                }
+
+                .f-control{
+                    background-color: transparent;
+                    border-color:rgba($color: $w-cl, $alpha: .2);
+                    color: $w-cl;
+
+                    &::placeholder{
+                        color: rgba($color: $w-cl, $alpha: .6);
+                    }
+
+                    &:hover , &:focus{
+                        border-color: $main-cl;
+                    }
+                }
+            }
+
+            textarea.f-control{
+                background-color: transparent;
+                border-color: rgba($color: $w-cl, $alpha: .2);
+                color: $w-cl;
+                &::placeholder{
+                    color: rgba($color: $w-cl, $alpha: .6);
+                }
+
+                &:hover , &:focus{
+                    border-color: $main-cl;
+                }
+            }
+
+            .teacher-accept{
+                .label{
+                    .accept-box{
+                        .checkmark{
+                            border-color: rgba($color: $w-cl, $alpha: .2);
+                        }
+                    }
+                }
+            }
         }
     }
 }

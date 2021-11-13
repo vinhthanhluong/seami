@@ -1,0 +1,290 @@
+.contact {
+    padding: 60px 0 80px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: '';
+        background-image: url('../img/bg-music.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        @include max-media($bk-d-768){
+            display: none;
+        }
+    }
+
+    &::after {
+        content: '';
+        background-image: url('../img/img-dia.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        width: 296px;
+        height: 296px;
+
+        @include max-media($bk-d-1440) {
+            display: none;
+        }
+
+    }
+
+    @include max-media($bk-d-1200) {
+        padding: 60px 0;
+    }
+
+    @include max-media($bk-d-992) {
+        padding: 40px 0;
+    }
+
+    .column {
+        width: 50%;
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
+    }
+
+    .contact-head {
+        margin-bottom: 10px;
+    }
+
+    .contact-tt {
+        margin-bottom: 30px;
+        line-height: 1.5;
+
+        @include max-media($bk-d-1200) {
+            margin-bottom: 20px;
+        }
+
+        @include max-media($bk-d-992){
+            margin-bottom: 10px;
+        }
+    }
+
+    .contact-desc {
+        font-weight: 300;
+        line-height: 1.5;
+    }
+
+    .contact-form {
+        .teacher-form {
+            .teacher-f {
+                .f-control {
+                    background-color: transparent;
+                }
+            }
+
+            .teacher-group{
+                &:not(:first-child){
+                    @include max-media($bk-d-1024){
+                        margin-top: 0;
+                    }
+                }
+                .teacher-f{
+                    @include max-media($bk-d-1200){
+                        width:calc(50% - 10px);
+                    }
+
+                    @include max-media($bk-d-1024){
+                        width: 100%;
+                        margin-top: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-list {
+        margin-top: 30px;
+
+        @include max-media($bk-d-1200) {
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+
+            &:not(:first-child) {
+                margin-top: 15px;
+            }
+
+            .contact-ig {
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                background-color: $main-cl;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .contact-tx {
+                padding-left: 13px;
+            }
+
+            .contact-t {
+                font-weight: 300;
+
+                .contact-link {
+                    font-weight: bold;
+                    color: $main-cl;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.system-seami {
+    background-color: $g-F8F8-cl;
+    padding: 70px 0 100px;
+    overflow: hidden;
+    @include max-media($bk-d-1200) {
+        padding: 60px 0;
+    }
+
+    @include max-media($bk-d-992) {
+        padding: 40px 0;
+    }
+
+    .system-head {
+        margin-bottom: 40px;
+
+        @include max-media($bk-d-1200) {
+            margin-bottom: 30px;
+        }
+
+        @include max-media($bk-d-992) {
+            margin-bottom: 20px;
+        }
+
+        .seami-label {
+            margin-bottom: 5px;
+        }
+    }
+
+    .system-content {
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .16);
+        border-radius: 4px;
+        background-color: $w-cl;
+        overflow: hidden;
+    }
+
+    .columns{
+        margin: 0;
+        @include max-media($bk-d-992){
+            flex-direction: column-reverse;
+        }
+    }
+
+    .column {
+        padding: 0;
+        &.system-tx {
+            width: calc(100% / 12 * 4 + 30px);
+            @include max-media($bk-d-992){
+                width: 100%;
+            }
+        }
+
+        &.system-mp {
+            width: calc(100% / 12 * 8 - 30px);
+            @include max-media($bk-d-992){
+                width: 100%;
+            }
+        }
+    }
+
+    .system-box {
+        padding: 0 30px;
+        @include max-media($bk-576){
+            padding: 0 20px;
+        }
+
+        &:last-child{
+            .system-bx{
+                border-bottom: none;
+            }
+        }
+
+        .system-bx {
+            padding: 25px 0;
+            border-bottom: 1px solid rgba($color: $b-cl, $alpha: .2);
+            @include max-media($bk-576){
+                padding: 20px 0;
+            }
+        }
+
+        .system-tt {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            transition: all .3s ease;
+            cursor: pointer;
+
+
+            &.active{
+                color: $main-cl;
+            }
+
+            img {
+                padding-left: 13px;
+            }
+        }
+
+        .system-item {
+            display: flex;
+            align-items: center;
+
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+
+            .system-text {
+                padding-left: 11px;
+                font-weight: 300;
+            }
+
+            .system-link {
+                color: $main-cl;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+            }
+        }
+
+    }
+
+    .system-map{
+        background-image: url('../img/loading.gif');
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        iframe{
+            width: 100%;
+            height: 100%;
+            @include max-media($bk-d-992){
+                height: 400px;
+            }
+            @include max-media($bk-576){
+                height: 280px;
+            }
+        }
+        
+    }
+}

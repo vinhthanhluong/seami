@@ -3699,6 +3699,7 @@ html .mfp-wrap {
   color: #fff;
   text-align: center;
   padding: 30px 0;
+  overflow: hidden;
 }
 .connect-us .seami-label {
   margin-bottom: 5px;
@@ -3820,6 +3821,7 @@ html .mfp-wrap {
 .slide-video-row {
   background-color: rgba(20, 95, 170, 0.05);
   padding: 100px 0 80px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .slide-video-row {
@@ -4229,6 +4231,7 @@ html .mfp-wrap {
 
 .achievement {
   padding: 80px 0 100px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .achievement {
@@ -5012,6 +5015,7 @@ html .mfp-wrap {
 
 .achi-student {
   padding: 60px 0 100px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .achi-student {
@@ -5117,6 +5121,7 @@ html .mfp-wrap {
 
 .classroom {
   padding: 60px 0 100px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .classroom {
@@ -5244,6 +5249,7 @@ html .mfp-wrap {
 }
 .find-class {
   padding: 60px 0 100px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .find-class {
@@ -5327,6 +5333,7 @@ html .mfp-wrap {
 
 .seami-public {
   padding: 60px 0 100px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .seami-public {
@@ -6037,6 +6044,7 @@ html .mfp-wrap {
 .similar-post {
   padding: 80px 0 100px;
   background-color: #F8F8F8;
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .similar-post {
@@ -6271,6 +6279,7 @@ html .mfp-wrap {
 
 .gallery-seami {
   padding: 60px 0 100px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .gallery-seami {
@@ -6375,13 +6384,38 @@ html .mfp-wrap {
 .brand-seami .brand-title {
   margin-bottom: 30px;
 }
+@media screen and (max-width: 1199px) {
+  .brand-seami .brand-title {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .brand-seami .brand-title {
+    margin-bottom: 10px;
+  }
+}
 .brand-seami .brand-head {
   max-width: calc(100% / 12 * 8);
   max-width: 780px;
   margin: 0 auto 30px;
 }
+@media screen and (max-width: 1023px) {
+  .brand-seami .brand-head {
+    margin-bottom: 20px;
+  }
+}
 .brand-seami .column {
   width: calc(100% / 3);
+}
+@media screen and (max-width: 1023px) {
+  .brand-seami .column {
+    width: calc(100% / 2);
+  }
+}
+@media screen and (max-width: 576px) {
+  .brand-seami .column {
+    width: 100%;
+  }
 }
 .brand-seami .brand-box {
   text-align: center;
@@ -6389,12 +6423,23 @@ html .mfp-wrap {
 .brand-seami .brand-box .brand-img {
   margin-bottom: 20px;
 }
+@media screen and (max-width: 1023px) {
+  .brand-seami .brand-box .brand-img {
+    margin-bottom: 15px;
+  }
+}
 .brand-seami .brand-box .brand-img img {
   margin: 0 auto;
 }
 .brand-seami .brand-box .brand-tt {
   margin-bottom: 15px;
   line-height: 1.2;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 1023px) {
+  .brand-seami .brand-box .brand-tt {
+    margin-bottom: 10px;
+  }
 }
 .brand-seami .brand-box .brand-desc {
   line-height: 1.5;
@@ -6402,6 +6447,72 @@ html .mfp-wrap {
 
 .franchise-seami {
   background-color: rgba(20, 95, 170, 0.05);
+  overflow: hidden;
+}
+.franchise-seami .seami-label {
+  margin-bottom: 5px;
+}
+.franchise-seami .fran-head {
+  max-width: 770px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .franchise-seami .fran-head {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .franchise-seami .fran-head {
+    margin-bottom: 10px;
+  }
+}
+.franchise-seami .columns {
+  margin: -35px;
+}
+@media screen and (max-width: 1199px) {
+  .franchise-seami .columns {
+    margin: -15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .franchise-seami .columns {
+    margin: -7.5px;
+  }
+}
+.franchise-seami .column {
+  width: 50%;
+  padding: 35px;
+}
+@media screen and (max-width: 1199px) {
+  .franchise-seami .column {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .franchise-seami .column {
+    padding: 7.5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .franchise-seami .column {
+    width: 100%;
+  }
+}
+.franchise-seami .mona-content p {
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.franchise-seami .mona-content h4 {
+  margin: 0;
+}
+.franchise-seami .mona-content ul {
+  margin: 0;
+}
+.franchise-seami .mona-content ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+  font-weight: 300;
 }
 
 .frequent-question {
@@ -6520,6 +6631,7 @@ html .mfp-wrap {
   position: relative;
   color: #fff;
   padding: 68px 0;
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .join-seami {
@@ -6546,7 +6658,12 @@ html .mfp-wrap {
 }
 .join-seami .join-head {
   margin-bottom: 26px;
-  max-width: 650px;
+  max-width: 640px;
+}
+@media screen and (max-width: 1199px) {
+  .join-seami .join-head {
+    margin-bottom: 20px;
+  }
 }
 .join-seami .join-head .seami-label {
   margin-bottom: 5px;
@@ -6560,8 +6677,44 @@ html .mfp-wrap {
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 767px) {
+  .join-seami .join-head .join-title {
+    margin-bottom: 10px;
+  }
+}
 .join-seami .join-head .join-desc {
   font-weight: 300;
+}
+.join-seami .join-main {
+  max-width: 640px;
+}
+.join-seami .join-main .teacher-form .teacher-f .label {
+  color: rgba(255, 255, 255, 0.5);
+}
+.join-seami .join-main .teacher-form .teacher-f .f-control {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.join-seami .join-main .teacher-form .teacher-f .f-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.join-seami .join-main .teacher-form .teacher-f .f-control:hover, .join-seami .join-main .teacher-form .teacher-f .f-control:focus {
+  border-color: #EA412C;
+}
+.join-seami .join-main .teacher-form textarea.f-control {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.join-seami .join-main .teacher-form textarea.f-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.join-seami .join-main .teacher-form textarea.f-control:hover, .join-seami .join-main .teacher-form textarea.f-control:focus {
+  border-color: #EA412C;
+}
+.join-seami .join-main .teacher-form .teacher-accept .label .accept-box .checkmark {
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .information-website {
@@ -6604,6 +6757,278 @@ html .mfp-wrap {
 }
 .information-website .web-list .web-link:hover {
   text-decoration: underline;
+}
+
+.contact {
+  padding: 60px 0 80px;
+  overflow: hidden;
+  position: relative;
+}
+.contact::before {
+  content: "";
+  background-image: url("../img/bg-music.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .contact::before {
+    display: none;
+  }
+}
+.contact::after {
+  content: "";
+  background-image: url("../img/img-dia.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 296px;
+  height: 296px;
+}
+@media screen and (max-width: 1439px) {
+  .contact::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .contact {
+    padding: 60px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact {
+    padding: 40px 0;
+  }
+}
+.contact .column {
+  width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .contact .column {
+    width: 100%;
+  }
+}
+.contact .contact-head {
+  margin-bottom: 10px;
+}
+.contact .contact-tt {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 1199px) {
+  .contact .contact-tt {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact .contact-tt {
+    margin-bottom: 10px;
+  }
+}
+.contact .contact-desc {
+  font-weight: 300;
+  line-height: 1.5;
+}
+.contact .contact-form .teacher-form .teacher-f .f-control {
+  background-color: transparent;
+}
+@media screen and (max-width: 1023px) {
+  .contact .contact-form .teacher-form .teacher-group:not(:first-child) {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .contact .contact-form .teacher-form .teacher-group .teacher-f {
+    width: calc(50% - 10px);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .contact .contact-form .teacher-form .teacher-group .teacher-f {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+.contact .contact-list {
+  margin-top: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .contact .contact-list {
+    margin-top: 20px;
+  }
+}
+.contact .contact-list .contact-item {
+  display: flex;
+  align-items: center;
+}
+.contact .contact-list .contact-item:not(:first-child) {
+  margin-top: 15px;
+}
+.contact .contact-list .contact-item .contact-ig {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #EA412C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .contact-list .contact-item .contact-tx {
+  padding-left: 13px;
+}
+.contact .contact-list .contact-item .contact-t {
+  font-weight: 300;
+}
+.contact .contact-list .contact-item .contact-t .contact-link {
+  font-weight: bold;
+  color: #EA412C;
+}
+.contact .contact-list .contact-item .contact-t .contact-link:hover {
+  text-decoration: underline;
+}
+
+.system-seami {
+  background-color: #F8F8F8;
+  padding: 70px 0 100px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1199px) {
+  .system-seami {
+    padding: 60px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .system-seami {
+    padding: 40px 0;
+  }
+}
+.system-seami .system-head {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1199px) {
+  .system-seami .system-head {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .system-seami .system-head {
+    margin-bottom: 20px;
+  }
+}
+.system-seami .system-head .seami-label {
+  margin-bottom: 5px;
+}
+.system-seami .system-content {
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.system-seami .columns {
+  margin: 0;
+}
+@media screen and (max-width: 991px) {
+  .system-seami .columns {
+    flex-direction: column-reverse;
+  }
+}
+.system-seami .column {
+  padding: 0;
+}
+.system-seami .column.system-tx {
+  width: calc(100% / 12 * 4 + 30px);
+}
+@media screen and (max-width: 991px) {
+  .system-seami .column.system-tx {
+    width: 100%;
+  }
+}
+.system-seami .column.system-mp {
+  width: calc(100% / 12 * 8 - 30px);
+}
+@media screen and (max-width: 991px) {
+  .system-seami .column.system-mp {
+    width: 100%;
+  }
+}
+.system-seami .system-box {
+  padding: 0 30px;
+}
+@media screen and (max-width: 576px) {
+  .system-seami .system-box {
+    padding: 0 20px;
+  }
+}
+.system-seami .system-box:last-child .system-bx {
+  border-bottom: none;
+}
+.system-seami .system-box .system-bx {
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 576px) {
+  .system-seami .system-box .system-bx {
+    padding: 20px 0;
+  }
+}
+.system-seami .system-box .system-tt {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.system-seami .system-box .system-tt.active {
+  color: #EA412C;
+}
+.system-seami .system-box .system-tt img {
+  padding-left: 13px;
+}
+.system-seami .system-box .system-item {
+  display: flex;
+  align-items: center;
+}
+.system-seami .system-box .system-item:not(:first-child) {
+  margin-top: 10px;
+}
+.system-seami .system-box .system-item .system-text {
+  padding-left: 11px;
+  font-weight: 300;
+}
+.system-seami .system-box .system-item .system-link {
+  color: #EA412C;
+  font-weight: bold;
+}
+.system-seami .system-box .system-item .system-link:hover {
+  text-decoration: underline;
+}
+.system-seami .system-map {
+  background-image: url("../img/loading.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.system-seami .system-map iframe {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 991px) {
+  .system-seami .system-map iframe {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .system-seami .system-map iframe {
+    height: 280px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

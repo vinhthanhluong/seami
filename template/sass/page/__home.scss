@@ -223,7 +223,7 @@
     color: $w-cl;
     text-align: center;
     padding: 30px 0;
-
+    overflow: hidden;
     .seami-label {
         margin-bottom: 5px;
         justify-content: center;
@@ -356,6 +356,7 @@
 .slide-video-row {
     background-color: rgba($color: $blue-cl, $alpha: .05);
     padding: 100px 0 80px;
+    overflow: hidden;
    
     @include max-media($bk-d-1200) {
         padding: 60px 0;
@@ -770,6 +771,7 @@
 
 .achievement{
     padding: 80px 0 100px;
+    overflow: hidden;
     @include max-media($bk-d-1200){
         padding: 60px 0;
     }

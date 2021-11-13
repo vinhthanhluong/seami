@@ -1,5 +1,6 @@
 .seami-public {
     padding: 60px 0 100px;
+    overflow: hidden;
 
     @include max-media($bk-d-1200) {
         padding: 60px 0;
@@ -820,6 +821,7 @@
 .similar-post{
     padding: 80px 0 100px;
     background-color: $g-F8F8-cl;
+    overflow: hidden;
     @include max-media($bk-d-1200){
         padding: 60px 0;
     }
