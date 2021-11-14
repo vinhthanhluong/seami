@@ -357,6 +357,9 @@
     background-color: rgba($color: $blue-cl, $alpha: .05);
     padding: 100px 0 80px;
     overflow: hidden;
+    &.bg-main{
+        background-color: rgba($color: $main-cl, $alpha: .05);
+    }
    
     @include max-media($bk-d-1200) {
         padding: 60px 0;

@@ -18,7 +18,8 @@
     font-family: 'HJ Gotham Round';
 }
 
-ul,ol{
+ul,
+ol {
     padding: 0;
 }
 
@@ -73,18 +74,19 @@ ul,ol{
                         @include visible;
                     }
                 }
+
                 .class-signup {
                     padding-right: 30px;
-        
+
                     &::after {
                         @include visible;
-        
+
                     }
                 }
             }
         }
 
-       
+
     }
 
     .class-img {

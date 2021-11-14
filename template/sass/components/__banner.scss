@@ -175,4 +175,41 @@
 
 
     }
+
+	&.banners-page {
+        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+		padding: 125px 0;
+		@include  max-media($bk-576){
+			padding: 100px 0;
+		}
+
+        &::before {
+            content: '';
+            background-color: rgba($color: $b-cl, $alpha: .6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .banners-title {
+			@include lh(52, 40);
+            margin-bottom: 0;
+            // @include max-media($bk-576) {
+            //     text-align: left;
+            // }
+        }
+
+
+        .banners-wrapper {
+            z-index: 1;
+            position: relative;
+        }
+        
+    }
 }
